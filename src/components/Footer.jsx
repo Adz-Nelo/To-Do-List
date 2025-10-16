@@ -1,13 +1,21 @@
 import React from "react";
 
-const footer = () => {
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className="animate-fadeIn">
-      <h1 className="text-center text-xl mt-5 text-white [text-shadow:_2px_2px_4px_black] transition-all duration-300 hover:scale-105">
-        Copyright © 2024 by Nelo Code | All Rights Reserved.
-      </h1>
-    </div>
+    <footer className="animate-fadeIn mt-8">
+      <div className="text-center">
+        <p className="text-lg text-white/90 [text-shadow:_1px_1px_2px_rgba(0,0,0,0.8)] transition-all duration-500 hover:scale-105 hover:text-white">
+          Copyright © {currentYear} by Nelo Code | All Rights Reserved.
+        </p>
+        <div className="mt-2 flex justify-center space-x-4">
+          <div className="h-px w-20 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
+          <div className="h-px w-20 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
+        </div>
+      </div>
+    </footer>
   );
 };
 
-export default footer;
+export default Footer;
